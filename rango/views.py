@@ -4,6 +4,7 @@ from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from rango.models import Category
 from rango.models import Page
+from django.shortcuts import reverse
 
 def index(request):
     # Query the database for a list of ALL categories currently stored.
