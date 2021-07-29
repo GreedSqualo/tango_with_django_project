@@ -15,7 +15,9 @@
             <strong>{{ boldmessage }}</strong>
         </div>
 
+        
         <div>
+            <h2>Most Liked Categories</h2>
         {% if categories %}
             <ul>
             {% for category in categories %}
@@ -26,6 +28,20 @@
             </ul>
         {% else %}
             <strong>There are no categories present.</strong>
+        {% endif %}
+        </div>
+
+        
+        <div>
+            <h2>Most viewed Pages</h2>
+        {% if pages %}
+            <ul>
+            {% for page in pages %}
+                <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <storng>There are no pages present.</strong>
         {% endif %}
         </div>
 
